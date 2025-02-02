@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - ImmunoLink</title>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="../assets/css/login.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1 class="logo-text">ImmunoLink</h1>
+    </div>
+    <nav>
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+    <div class="off-screen-menu">
+      <ul class="menu-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">What We Do</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="login.html">Sign Up / Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section id="login" class="content-section">
+    <form action="process-login.html" method="POST" class="login-form">
+      <h2 style="text-align: center;"">Login / Sign Up</h2>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </form>
+  </section>
+
+  <!-- Link to external JavaScript -->
+  <script src="../assets/js/login.js"></script>
+</body>
+</html>
