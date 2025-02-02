@@ -1,3 +1,31 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 0;
+  }
+/*                                     */
+.logo-text {
+    margin: 0;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease;
+    padding-left: 8px;
+  }
+  
+  .logo-text.light {
+    color: #fff; /* White for light backgrounds */
+  }
+  
+  .logo-text.dark {
+    color: #000; /* Black for dark backgrounds */
+  }
+  
+
 .off-screen-menu {
     background-color: rgb(30, 34, 42);
     height: 100vh;
@@ -220,6 +248,8 @@ body {
 
 .chats-container .bot-message {
     margin: 9px auto;
+    background-color: var(--secondary-color);
+    border-radius: 13px 13px 13px 3px;
 }
 
 .chats-container .message .message-text {
