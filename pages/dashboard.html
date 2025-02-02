@@ -12,8 +12,9 @@
         <h1 class="logo-text">ImmunoLink</h1>
       </div>
       <div class="form__group field">
-        <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+        <input type="input" class="form__field" placeholder="Name" name="name" id='name' oninput="showSuggestions(this.value)" required />
         <label for="name" class="form__label">Search</label>
+        <ul id="suggestions" class="suggestions-list"></ul>
       </div>
       <div class="off-screen-menu">
           <ul class="menu-list">
@@ -21,7 +22,7 @@
               <li class="menu-options"><a href="../pages/about.html">About</a></li>
               <li class="menu-options"><a href="../pages/services.html">Services</a></li>
               <li class="menu-options"><a href="../pages/journal.html">Journal</a></li>
-              <li class="menu-options"><a href="../pages/faq.html">FAQ</a></li>
+              <li class="menu-options"><a href="../pages/symptoms.html">Symptoms</a></li>
               <li class="menu-options"><a href="../pages/calendar.html">Schedule an Appointment</a></li>
               <li class="menu-options"><a href="../pages/login.html">Logout</a></li>
           </ul>
