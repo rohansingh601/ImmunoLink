@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - ImmunoLink</title>
+    <link rel="stylesheet" href="../assets/css/tracker.css">
+</head>
+<body style="background: url('../assets/images/bg-stock.jpeg') no-repeat center center fixed; background-size: cover;">
+    <header>
+        <div class="logo">
+            <h1 class="logo-text">ImmunoLink</h1>
+        </div>
+        <div class="off-screen-menu">
+            <ul class="menu-list">
+                <li class="menu-options"><a href="../pages/dashboard.html">Home</a></li>
+                <li class="menu-options"><a href="../pages/profile.html">Profile</a></li>
+                <li class="menu-options"><a href="../pages/services.html">Services</a></li>
+                <li class="menu-options"><a href="../pages/journal.html">Journal</a></li>
+                <li class="menu-options"><a href="../pages/symptoms.html">AI</a></li>
+                <li class="menu-options"><a href="../pages/tracker.html">Tracker</a></li>
+                <li class="menu-options"><a href="../pages/calendar.html">Schedule an Appointment</a></li>
+                <li class="menu-options"><a href="../pages/login.html">Logout</a></li>
+            </ul>
+        </div>
+        <nav>
+            <div class='ham-menu'>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main class="tracker-container">
+        <div class="condition-selector">
+            <h2>Select Your Condition</h2>
+            <select id="condition-select">
+                <option value="">Choose a condition...</option>
+                <option value="rheumatoid-arthritis">Rheumatoid Arthritis</option>
+                <option value="psoriasis">Psoriasis</option>
+                <option value="ibd">Inflammatory Bowel Disease (IBD)</option>
+            </select>
+        </div>
+
+        <div class="tracking-section hidden" id="tracking-section">
+            <div class="list-container">
+                <div class="symptoms-list">
+                    <h3>Symptoms</h3>
+                    <div class="checkbox-group" id="symptoms"></div>
+                </div>
+                <div class="triggers-list">
+                    <h3>Triggers</h3>
+                    <div class="checkbox-group" id="triggers"></div>
+                </div>
+            </div>
+            <button id="save-entry" class="save-button">Save Entry</button>
+        </div>
+
+        <button id="view-history" class="history-button">View History</button>
+        
+        <div id="history-overlay" class="overlay hidden">
+            <div class="overlay-content">
+                <h2>Tracking History</h2>
+                <div id="history-entries"></div>
+                <button id="close-history" class="close-button">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../assets/js/tracker.js"></script>
+</body>
+</html>
