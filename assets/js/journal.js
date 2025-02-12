@@ -99,24 +99,21 @@ function showNotes() {
   notes.forEach((note, id) => {
     let filterDesc = note.description.replaceAll("\n", '<br/>');
     let liTag = `<li class="note">
-                        <div class="details">
-                            <p>${note.title}</p>
-                            <span>${filterDesc}</span>
-                        </div>
-                        <div class="bottom-content">
-                            <span>${note.date}</span>
-                            <div class="settings">
-                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
-                                <ul class="menu">
-                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><EDIT</i>Edit</li>
-                                    <li onclick="deleteNote(${id})">DELETE</i>Delete</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>`;
+                    <div class="details">
+                        <p>${note.title}</p>
+                        <span>${filterDesc}</span>
+                    </div>
+                    <div class="bottom-content">
+                        <span>${note.date}</span>
+                        <button class="delete-btn" onclick="deleteNote(${id})">
+                            <i class="fa fa-trash"></i> Delete
+                        </button>
+                    </div>
+                </li>`;
     addBox.insertAdjacentHTML("afterend", liTag);
   });
 }
+
 showNotes();
 // Show menu options for each note
 function showMenu(elem) {
@@ -135,6 +132,7 @@ function deleteNote(noteId) {
   localStorage.setItem("notes", JSON.stringify(notes));
   showNotes();
 }
+
 // Update a specific note
 function updateNote(noteId, title, filterDesc) {
   let description = filterDesc.replaceAll('<br/>', '\r\n');
